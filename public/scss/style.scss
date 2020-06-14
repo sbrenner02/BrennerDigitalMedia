@@ -1,0 +1,171 @@
+$color-red: #8b0000;
+$background-color: #fff;
+
+html, body {
+    background-color: $background-color;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.background-color{
+    background-color: $background-color;
+}
+
+.full-height {
+    height: 40vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.logo{
+    width: 100%;
+    max-width: 650px;
+}
+
+.content{
+    text-align: justify;
+}
+
+.red, .red a, .red a:active, .red a:hover, .red a:visited{
+    color: $color-red !important;
+}
+
+#nav {
+
+    nav {
+        margin: auto auto;
+        background: $background-color;
+    }
+
+     ul {
+        list-style: none;
+        margin:0;
+
+    }
+     ul li {
+        display: inline-block;
+    }
+     ul li a {
+        padding-bottom: 10px;
+        text-decoration: none;
+        color: #808080;
+    }
+     ul li a,
+     ul li a:after,
+     ul li a:before {
+        transition: all .5s;
+    }
+     ul li a:hover {
+        color:$color-red;
+    }
+    .stroke ul li a
+    {
+        position: relative;
+    }
+    .stroke ul li a:after,
+     ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        content: '.';
+        color: transparent;
+        background: $color-red;
+        height: 1px;
+    }
+    .stroke ul li a:hover:after {
+        width: 100%;
+    }
+
+     ul li a {
+        transition: all 1s;
+    }
+
+     ul li a:after {
+        text-align: left;
+        content: '.';
+        margin: 0;
+        opacity: 0;
+    }
+     ul li a:hover {
+        color: $color-red;
+        z-index: 1;
+    }
+     ul li a:hover:after {
+        z-index: -10;
+        animation: fill 1s forwards;
+        opacity: 1;
+    }
+
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.5rem;
+    text-align: center;
+}
+
+.top-border{
+    border-top: 1px solid $color-red;
+}
+
+.bottom-border{
+    border-bottom: 1px solid $color-red;
+}
+
+h2{
+    color: $color-red;
+    padding: 2rem 0;
+}
+
+.portfolio-item{
+    border: 2px solid $color-red;
+    padding: 0 0rem;
+    background-color: #D3D3D3;
+
+    .card-body{
+        padding: 1rem .5rem .5rem .5rem;
+    }
+
+    img{
+        border-bottom: 2px solid $color-red;
+    }
+
+    h4{
+        font-weight: bolder;
+        color: $color-red;
+    }
+
+    a:active, a:visited{
+        color: $color-red;
+        font-weight: bolder;
+    }
+}
