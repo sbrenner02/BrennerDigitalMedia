@@ -18,13 +18,11 @@
             <a href="/"><img src="./images/brennerdigital.png" class="mt-3 logo"></a>
         </div>
     </div>
-    <div>
         @include('navigation')
-    </div>
         <br><br>
-        <div class="flex-center row justify-content-center">
-            <div class="col-12">@yield('content')</div>
-        </div>
+    <div class="flex-center row justify-content-center col-12 no-gutters">
+        @yield('content')
+    </div>
 
 <div>
     @include('footer')
