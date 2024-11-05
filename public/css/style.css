@@ -1,0 +1,146 @@
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+.background-color {
+  background-color: #fff;
+}
+
+.full-height {
+  height: 40vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.logo {
+  width: 100%;
+  max-width: 650px;
+}
+
+.red, .red a, .red a:active, .red a:hover, .red a:visited {
+  color: #8b0000 !important;
+}
+
+nav {
+  margin: auto auto;
+  background: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+ul li {
+  display: inline-block;
+  font-size: 17px;
+}
+ul li a {
+  position: relative;
+  padding-bottom: 0.25rem;
+  text-decoration: none !important;
+  color: #808080;
+  transition: all 1s;
+}
+ul li a:after, ul li a:before {
+  transition: all 0.5s;
+}
+ul li a:after {
+  text-align: left;
+  content: ".";
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  color: transparent;
+  background: #8b0000;
+  height: 1px;
+}
+ul li a:hover {
+  color: #8b0000;
+  z-index: 1;
+}
+ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  opacity: 1;
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.top-border {
+  border-top: 1px solid #8b0000;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #8b0000;
+}
+
+h2 {
+  color: #8b0000;
+  padding: 0 0 2rem 0;
+}
+
+.portfolio-item {
+  border: 2px solid #8b0000;
+  padding: 0 0;
+  background-color: #D3D3D3;
+}
+.portfolio-item .card-body {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+.portfolio-item img {
+  border-bottom: 2px solid #8b0000;
+  opacity: 50%;
+}
+.portfolio-item img:hover {
+  opacity: 100%;
+}
+.portfolio-item .card-text {
+  font-size: 17px;
+  font-weight: bolder;
+  color: #8b0000;
+}
+.portfolio-item a:active, .portfolio-item a:visited {
+  color: #8b0000;
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,189 @@
+$color-red: #8b0000;
+$background-color: #fff;
+
+//Responsiveness Config
+//Screen Resolution Breakpoints
+$break-small: 320px;
+$break-medium: 768px;
+$break-large: 1024px;
+$break-xlarge: 1250px;
+
+//Responsiveness Mixins
+// Small devices
+@mixin sm {
+    @media screen and (min-width: #{$break-small}) and (max-width: #{$break-medium}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media screen and (min-width: #{$break-medium}) and (max-width: #{$break-large}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media screen and (min-width: #{$break-large}) {
+        @content;
+    }
+}
+
+// XLarge devices
+@mixin xlg {
+    @media screen and (min-width: #{$break-xlarge}) {
+        @content;
+    }
+}
+
+html, body {
+    background-color: $background-color;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.background-color{
+    background-color: $background-color;
+}
+
+.full-height {
+    height: 40vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.logo{
+    width: 100%;
+    max-width: 650px;
+}
+
+.red, .red a, .red a:active, .red a:hover, .red a:visited{
+    color: $color-red !important;
+}
+
+nav {
+    margin: auto auto;
+    background: $background-color;
+}
+ ul {
+     list-style: none;
+     margin: 0;
+
+     li {
+         display: inline-block;
+         font-size: 17px;
+
+         a {
+             position: relative;
+             padding-bottom: .25rem;
+             text-decoration: none !important;
+             color: #808080;
+             transition: all 1s;
+             &:after,
+             &:before {
+                 transition: all .5s;
+             }
+             &:after {
+                 text-align: left;
+                 content: '.';
+                 margin: 0;
+                 opacity: 0;
+                 position: absolute;
+                 bottom: 0;
+                 left: 0;
+                 right: 0;
+                 width: 0;
+                 color: transparent;
+                 background: $color-red;
+                 height: 1px;
+             }
+             &:hover {
+                 color:$color-red;
+                 z-index: 1;
+                 &:after {
+                     z-index: -10;
+                     animation: fill 1s forwards;
+                     opacity: 1;
+                     width: 100%;
+                 }
+             }
+         }
+     }
+ }
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.top-border {
+    border-top: 1px solid $color-red;
+}
+
+.bottom-border {
+    border-bottom: 1px solid $color-red;
+}
+
+h2 {
+    color: $color-red;
+    padding: 0 0 2rem 0 ;
+}
+
+.portfolio-item {
+    border: 2px solid $color-red;
+    padding: 0 0;
+    background-color: #D3D3D3;
+
+    .card-body {
+        padding: .5rem .5rem 0 .5rem;
+    }
+
+    img {
+        border-bottom: 2px solid $color-red;
+        opacity: 50%;
+        &:hover {
+            opacity: 100%;
+        }
+    }
+
+    .card-text {
+        font-size: 17px;
+        font-weight: bolder;
+        color: $color-red;
+    }
+
+    a:active, a:visited{
+        color: $color-red;
+        font-weight: bolder;
+    }
+}
